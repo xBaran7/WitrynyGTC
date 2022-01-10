@@ -11,10 +11,16 @@ function reverseArray(table) {
 
 console.log(reverseArray(["A", "B", "C"]))
 
-function reverseArrayInPlace() {
-
+function reverseArrayInPlace(arrayValue) {
+    for(let i = 0; i < table; i++) {
+        let x = arrayValue[i]
+        arrayValue.splice(i, 1);
+        arrayValue.unshift(x);
+    }
+    return arrayValue;
 }
 
 let arrayValue = [1, 2, 3, 4, 5];
 reverseArrayInPlace(arrayValue);
 console.log(arrayValue);
+
